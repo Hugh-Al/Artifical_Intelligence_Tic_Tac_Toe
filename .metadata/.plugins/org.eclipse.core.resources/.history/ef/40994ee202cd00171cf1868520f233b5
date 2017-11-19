@@ -1,0 +1,13 @@
+
+public class Game {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hello World");
+		PlayerFactory playerFactory = new PlayerFactory();
+		Player player1 = playerFactory.getPlayer("HumanPlayer");
+		Player player2 = playerFactory.getPlayer("HeuristicPlayer");
+		
+	}
+
+}

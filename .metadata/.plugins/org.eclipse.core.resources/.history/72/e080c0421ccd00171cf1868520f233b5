@@ -1,0 +1,16 @@
+
+public class HumanPlayer implements Player{
+
+	public HumanPlayer(){
+		System.out.println("Creating Human Player");
+	}
+	
+	@Override
+	public int makeMove() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+
+}

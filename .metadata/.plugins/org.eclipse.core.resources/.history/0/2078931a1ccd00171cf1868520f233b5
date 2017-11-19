@@ -1,0 +1,21 @@
+
+public class HumanPlayer implements Player{
+
+	@Override
+	public void play() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public HumanPlayer(){
+		System.out.println("Creating Human Player");
+	}
+
+	@Override
+	public void internalState() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}
