@@ -7,14 +7,12 @@ public class HumanPlayer implements Player{
 	}
 	
 	@Override
-	public int makeMove() {
-		// TODO Auto-generated method stub
+	public String makeMove() {
 		Scanner reader = new Scanner(System.in);
-		System.out.println("Which row to place your marker?");
-		int row = reader.nextInt();
-		System.out.println("Which col to place your marker?");
-		int col = reader.nextInt();
-		return (row*3) + col;
+		String input = reader.nextLine();
+		//TODO validate the move
+		System.out.println(input);
+		return input;
 	}
 
 

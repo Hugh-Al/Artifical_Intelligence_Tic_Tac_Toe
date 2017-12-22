@@ -13,4 +13,8 @@ public class TicTacToe {
 	public void display(){
 		gameBoard.displayBoard();
 	}
+	
+	public boolean isGameCompleted(){
+		return gameBoard.isGameCompleted();
+	}
 }

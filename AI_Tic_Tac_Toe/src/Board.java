@@ -48,6 +48,11 @@ public class Board {
 		}
 		return true;
 	}
+	
+	public boolean isValidMove(String move){
+		//TODO implement
+		return false;
+	}
 
 	public boolean winCondition() {
 		// Check for rows that has 3 in a row
@@ -70,7 +75,6 @@ public class Board {
 		if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[2][0] != ' ') {
 			return true;
 		}
-
 		return false;
 	}
 
