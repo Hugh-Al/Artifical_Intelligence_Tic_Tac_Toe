@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
-public class HumanPlayer implements Player{
+public class HumanPlayer extends Player implements PlayerInterface{
+	
+	private Board currentBoard;
 
 	public HumanPlayer(){
 		System.out.println("Creating Human Player");
@@ -14,6 +16,13 @@ public class HumanPlayer implements Player{
 		System.out.println(input);
 		return input;
 	}
+
+	@Override
+	public void testPrint() {
+		System.out.println("Testing interface inside human player");
+		
+	}
+	
 
 
 

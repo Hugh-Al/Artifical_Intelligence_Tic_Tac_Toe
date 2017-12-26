@@ -11,6 +11,38 @@ public class Board {
 			}
 		}
 	}
+	
+	public void takeMove(String input) {
+		int count = 0;
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
+				if(board[i][j] != ' ') {
+					count++;
+				}
+			}
+		}
+		System.out.println("Row is " + count/3 + "\nCol is " + count%3);
+		if(input.equals("a")) {
+			board[count/3][count%3] = 'X';
+		} else {
+			board[count/3][count%3] = 'O';
+		}
+	}
+	
+	public void playMove(String input, char tile) {
+		char first = input.charAt(0);
+		char last = input.charAt(input.length() - 1);
+		int row, col;
+		if(first == 'A') {
+			row = 0;
+		} else if (first == 'B') {
+			row = 1;
+		} else {
+			row = 2;
+		}
+		board[row][Character.getNumericValue(last)-1] = tile;
+		
+	}
 
 	public void displayBoard() {
 		for (int i = 0; i < board.length; i++) {
@@ -25,6 +57,7 @@ public class Board {
 				System.out.println("-----");
 			}
 		}
+		System.out.println();
 	}
 
 	public char[][] getBoardState() {
