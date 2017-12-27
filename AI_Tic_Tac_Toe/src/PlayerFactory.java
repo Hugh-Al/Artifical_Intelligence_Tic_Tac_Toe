@@ -6,6 +6,8 @@ public class PlayerFactory {
 			return new HumanPlayer();
 		case "HeuristicPlayer":
 			return new HeuristicPlayer();
+		case "RandomPlayer":
+			return new RandomPlayer();
 		default:
 			return null;
 		}

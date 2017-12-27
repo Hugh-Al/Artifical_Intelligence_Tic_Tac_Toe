@@ -1,21 +1,17 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class HeuristicPlayer extends Player implements PlayerInterface{
+public class HeuristicPlayer extends Player{
 	
 	
 	public HeuristicPlayer(){
 		System.out.println("Creating heuristic Player");
-		neighbours = new ArrayList<>();
 	}
 
 	@Override
 	public String makeMove() {
-		Scanner reader = new Scanner(System.in);
-		String input = reader.nextLine();
-		//TODO validate the move
-		reader.close();
-		return input;
+		
+		return "A1";
 	}
 	
 	public void getNeighbours() {
@@ -29,8 +25,14 @@ public class HeuristicPlayer extends Player implements PlayerInterface{
 	@Override
 	public void testPrint() {
 		System.out.println("Testing interface insider heuristics");
-		
 	}
+
+	@Override
+	public String selectMove() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 
 
 

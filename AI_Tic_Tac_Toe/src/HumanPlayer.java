@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class HumanPlayer extends Player implements PlayerInterface{
+public class HumanPlayer extends Player{
 	
 	private Board currentBoard;
 
@@ -14,6 +14,7 @@ public class HumanPlayer extends Player implements PlayerInterface{
 		String input = reader.nextLine();
 		//TODO validate the move
 		System.out.println(input);
+//		reader.close();
 		return input;
 	}
 
@@ -21,6 +22,12 @@ public class HumanPlayer extends Player implements PlayerInterface{
 	public void testPrint() {
 		System.out.println("Testing interface inside human player");
 		
+	}
+
+	@Override
+	public String selectMove() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 

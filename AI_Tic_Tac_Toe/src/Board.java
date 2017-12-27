@@ -12,20 +12,61 @@ public class Board {
 		}
 	}
 	
+	public boolean validMove(String input) {
+		if(input.length() != 2) {
+			return false;
+		}
+		char row = input.charAt(0);
+		int rowVal;
+		if(row == 'A') {
+			rowVal = 0;
+		} else if (row == 'B') {
+			rowVal = 1;
+		} else if (row == 'C') {
+			rowVal = 2;
+		} else {
+			return false;
+		}
+		int col = Character.getNumericValue(input.charAt(1)) - 1;
+		if(board[rowVal][col] == EMPTY) {
+			System.out.println("valid move");
+			System.out.println(board[rowVal][col]);
+			return true;
+		} else {
+			System.out.println("Invalid move, piece " + board[rowVal][col] + " is present already");
+			return false;
+		}
+	}
+	
 	public void takeMove(String input) {
-		int count = 0;
+//		int count = 0;
+//		for(int i = 0; i < 3; i++) {
+//			for(int j = 0; j < 3; j++) {
+//				if(board[i][j] != ' ') {
+//					count++;
+//				}
+//			}
+//		}
+//		System.out.println("Row is " + count/3 + "\nCol is " + count%3);
+//		if(input.equals("a")) {
+//			board[count/3][count%3] = 'X';
+//		} else {
+//			board[count/3][count%3] = 'O';
+//		}
 		for(int i = 0; i < 3; i++) {
 			for(int j = 0; j < 3; j++) {
-				if(board[i][j] != ' ') {
-					count++;
+				if(board[i][j] != EMPTY) {
+					continue;
+				} else {
+					if(input.equals("a")) {
+						board[i][j] = 'X';
+						return;
+					}else {
+						board[i][j] = 'O';
+						return;
+					}
 				}
 			}
-		}
-		System.out.println("Row is " + count/3 + "\nCol is " + count%3);
-		if(input.equals("a")) {
-			board[count/3][count%3] = 'X';
-		} else {
-			board[count/3][count%3] = 'O';
 		}
 	}
 	
@@ -40,6 +81,7 @@ public class Board {
 		} else {
 			row = 2;
 		}
+		System.out.println("Ammeding");
 		board[row][Character.getNumericValue(last)-1] = tile;
 		
 	}
